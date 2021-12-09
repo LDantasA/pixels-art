@@ -2,15 +2,25 @@ body {
   text-align: center;
 }
 
-#color-palette {}
+#color-palette {
+  height: 35px;
+  margin-bottom: 5px;
+}
 
 .color {
   display: inline-block;
+  vertical-align: middle;
   border: 1px solid black;
   width: 30px;
   height: 30px;
   margin: 2px;
+  transition: 0.2s;
 }
+
+/* .selected {
+  width: 32.5px;
+  height: 32.5px;
+} */
 
 #pixel-board {
   /* ref: https://www.w3schools.com/css/css_grid.asp */
