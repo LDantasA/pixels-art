@@ -43,7 +43,16 @@ function pixelColorizer(event) {
   event.target.style.backgroundColor = selectedColor.style.backgroundColor;
 }
 
+function boardReset() {
+  const pixels = document.getElementsByClassName('pixel');
+
+  for (let pixel of pixels) {
+    pixel.style.backgroundColor = null;
+  }
+}
+
 window.onload = function () {
   generatePalette(['black', 'red', 'green', 'blue']);
   generateBoard(5);
+  document.getElementById('clear-board').addEventListener('click', boardReset);
 };
