@@ -1,8 +1,20 @@
 body {
   text-align: center;
+  margin: 1px
 }
 
+header {
+  position: fixed;
+  background-color: rgb(210, 255, 229);
+  border: double yellowgreen;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+
 #title {
+  margin-top: 0px;
   margin-bottom: 0px;
 }
 
@@ -22,18 +34,36 @@ body {
 
 #clear-board {
   font-size: 14px;
-  margin: 5px;
+  margin: 5px auto 1px auto;
+}
+
+#custom-board {
+  line-height: 0px;
+  display: inline-flex;
+}
+
+#board-size {
+  width: 50px;
+  height: min-content;
+  font-size: 15px;
+  margin-top: 9px;
+  margin-left: 5px;
+}
+
+#generate-board {
+  font-size: 15px;
 }
 
 #pixel-board {
   /* ref: https://www.w3schools.com/css/css_grid.asp */
   display: inline-grid;
   border: 1px solid black;
+  margin-top: 150px;
 }
 
 .pixel {
+  background-color: white;
   border: 1px solid black;
   width: 40px;
   height: 40px;
-  background-color: white;
 }

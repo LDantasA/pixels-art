@@ -51,8 +51,26 @@ function boardReset() {
   }
 }
 
+function customBoard(event) {
+  const pixelBoard = document.getElementById('pixel-board');
+  let size = document.getElementById('board-size').value;
+  if (size != '') {
+    if (size < 5) {
+      size = 5;
+    } else if (size > 50) {
+      size = 50;
+    }
+    pixelBoard.innerHTML = null;
+    pixelBoard.style.gridTemplateColumns = null;
+    generateBoard(size);
+  } else {
+    alert('Board inválido!');
+  }
+}
+
 window.onload = function () {
   generatePalette(['black', 'red', 'green', 'blue']);
   generateBoard(5);
-  document.getElementById('clear-board').addEventListener('click', boardReset);
+  document.querySelector('#clear-board').addEventListener('click', boardReset);
+  document.querySelector('form').addEventListener('submit', customBoard);
 };
