@@ -72,7 +72,7 @@ function generateColor() {
   let rgb = [];
 
   for (i = 0; i < 3; i++) {
-    let color = Math.round(Math.random() * 255);
+    let color = Math.floor(Math.random() * 256);
     rgb.push(color);
   }
 
