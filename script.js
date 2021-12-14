@@ -68,8 +68,19 @@ function customBoard(event) {
   }
 }
 
+function generateColor() {
+  let rgb = [];
+
+  for (i = 0; i < 3; i++) {
+    let color = Math.round(Math.random() * 255);
+    rgb.push(color);
+  }
+
+  return 'rgb(' + rgb[0] + ', ' + rgb[1] + ', ' + rgb[2] + ')';
+}
+
 window.onload = function () {
-  generatePalette(['black', 'red', 'green', 'blue']);
+  generatePalette(['black', generateColor(), generateColor(), generateColor()]);
   generateBoard(5);
   document.querySelector('#clear-board').addEventListener('click', boardReset);
   document.querySelector('form').addEventListener('submit', customBoard);
